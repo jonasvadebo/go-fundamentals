@@ -3,27 +3,21 @@ package main
 import "fmt"
 
 func main() {
-	//Declare variables
+	//Pointers
 
-	var i int
-	i = 42
-	fmt.Println(i)
+	/* var firstNamePtr *string = new(string)
 
-	var pi float32 = 3.14
-	fmt.Println(pi)
+	*firstNamePtr = "Jonas"
+
+	fmt.Println(*firstNamePtr) */
 
 	firstName := "Jonas"
 	fmt.Println(firstName)
 
-	b := true
-	fmt.Println(b)
+	firstNamePtr := &firstName
+	fmt.Println(firstNamePtr, *firstNamePtr)
 
-	c := complex(2, 4)
-	fmt.Println(c)
-
-	r, im := real(c), imag(c)
-
-	fmt.Println(r)
-	fmt.Println(im)
+	firstName = "Niklas"
+	fmt.Println(firstNamePtr, *firstNamePtr)
 
 }
