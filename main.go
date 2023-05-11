@@ -3,21 +3,19 @@ package main
 import "fmt"
 
 func main() {
-	//Pointers
+	const pi = 3.14
+	fmt.Println(pi)
 
-	/* var firstNamePtr *string = new(string)
+	/* 	const c = 3
+	   	fmt.Println(c + 3)
 
-	*firstNamePtr = "Jonas"
+	   	//bunch of code
+	   	fmt.Println(c + 1.2) */
 
-	fmt.Println(*firstNamePtr) */
+	const c int = 3
+	fmt.Println(c + 3)
 
-	firstName := "Jonas"
-	fmt.Println(firstName)
-
-	firstNamePtr := &firstName
-	fmt.Println(firstNamePtr, *firstNamePtr)
-
-	firstName = "Niklas"
-	fmt.Println(firstNamePtr, *firstNamePtr)
+	//bunch of code
+	//fmt.Println(c + 1.2)
 
 }
