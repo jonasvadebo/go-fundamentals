@@ -2,18 +2,16 @@ package main
 
 import "fmt"
 
-const (
-	first = iota
-	second
-)
-
-const (
-	third = iota
-	fourth
-)
-
 func main() {
+	//Array
+	/* 	var users [3]string
+	   	users[0] = "Jonas"
+	   	users[1] = "Niklas"
+	   	users[2] = "Fredrik" */
 
-	fmt.Println(first, second, third, fourth)
+	users := [3]string{"Jonas", "Niklas", "Fredrik"}
+
+	fmt.Println(users)
+	fmt.Println(users[1])
 
 }
