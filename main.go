@@ -3,15 +3,28 @@ package main
 import "fmt"
 
 func main() {
-	//Array
-	/* 	var users [3]string
-	   	users[0] = "Jonas"
-	   	users[1] = "Niklas"
-	   	users[2] = "Fredrik" */
+	/* 	users := [3]string{"Jonas", "Niklas", "Fredrik"}
 
-	users := [3]string{"Jonas", "Niklas", "Fredrik"}
+	   	userSlice := users[:]
+
+	   	users[0] = "Tomas"
+	   	userSlice[1] = "Steven"
+
+	   	fmt.Println(users, userSlice) */
+
+	//Slice
+	users := []string{"Jonas", "Niklas", "Fredrik"}
 
 	fmt.Println(users)
-	fmt.Println(users[1])
+	fmt.Printf("The length of slice:  %d and the capacity of slice: %d \n", len(users), cap(users))
+
+	users = append(users, "Jonny")
+
+	fmt.Printf("The length of slice:  %d and the capacity of slice: %d \n", len(users), cap(users))
+
+	user2 := users[1:]
+	user3 := users[:3]
+	user4 := users[1:2]
+	fmt.Println(user2, user3, user4)
 
 }
