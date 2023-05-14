@@ -3,28 +3,30 @@ package main
 import "fmt"
 
 func main() {
-	/* 	users := [3]string{"Jonas", "Niklas", "Fredrik"}
+	m := map[string]int{"Jonas": 1980, "Johan": 1981}
 
-	   	userSlice := users[:]
+	fmt.Println(m)
 
-	   	users[0] = "Tomas"
-	   	userSlice[1] = "Steven"
+	fmt.Println(m["Jonas"])
 
-	   	fmt.Println(users, userSlice) */
+	m["Johan"] = 1982
 
-	//Slice
-	users := []string{"Jonas", "Niklas", "Fredrik"}
+	fmt.Println(m)
 
-	fmt.Println(users)
-	fmt.Printf("The length of slice:  %d and the capacity of slice: %d \n", len(users), cap(users))
+	fmt.Println("Full map!")
 
-	users = append(users, "Jonny")
+	for k, v := range m {
+		fmt.Printf("%s -> %d \n", k, v)
 
-	fmt.Printf("The length of slice:  %d and the capacity of slice: %d \n", len(users), cap(users))
+	}
 
-	user2 := users[1:]
-	user3 := users[:3]
-	user4 := users[1:2]
-	fmt.Println(user2, user3, user4)
+	delete(m, "Johan")
+
+	fmt.Println("Reduced map!")
+
+	for k, v := range m {
+		fmt.Printf("%s -> %d \n", k, v)
+
+	}
 
 }
