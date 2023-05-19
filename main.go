@@ -9,8 +9,14 @@ func main() {
 	//3) infinite loops
 	//4) loop over collections.
 
-	/** loop until condition with post clauses **/
-	for i := 0; i < 5; i++ {
+	/** infinite loops, ugly way **/
+	var i int
+	//for ; ;{ ugly way
+	for {
+		if i == 5 {
+			break
+		}
 		println(i)
+		i++
 	}
 }
