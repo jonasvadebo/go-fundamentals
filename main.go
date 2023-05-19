@@ -9,16 +9,8 @@ func main() {
 	//3) infinite loops
 	//4) loop over collections.
 
-	/** Loop until condution **/
-	var i int
-	for i < 5 {
+	/** loop until condition with post clauses **/
+	for i := 0; i < 5; i++ {
 		println(i)
-		i++
-
-		if i == 3 {
-			//break
-			continue
-		}
-		println("Continuing....")
 	}
 }
