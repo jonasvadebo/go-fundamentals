@@ -1,26 +1,24 @@
 package main
 
-import "fmt"
-
 func main() {
-	// Structs
+	//Types of loops
+	//All loops will be for-loops
 
-	type user struct {
-		ID        int
-		firstName string
-		lastName  string
+	//1) Loop until condition is met
+	//2) loop until condition with post clause
+	//3) infinite loops
+	//4) loop over collections.
+
+	/** Loop until condution **/
+	var i int
+	for i < 5 {
+		println(i)
+		i++
+
+		if i == 3 {
+			//break
+			continue
+		}
+		println("Continuing....")
 	}
-
-	//Declare a used and initilize with its zero values
-	var u user
-	fmt.Println(u)
-
-	//ser values
-
-	u.ID = 10
-	u.firstName = "Jonas"
-	u.lastName = "Vadebo"
-
-	fmt.Println(u)
-
 }
