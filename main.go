@@ -3,30 +3,24 @@ package main
 import "fmt"
 
 func main() {
-	m := map[string]int{"Jonas": 1980, "Johan": 1981}
+	// Structs
 
-	fmt.Println(m)
-
-	fmt.Println(m["Jonas"])
-
-	m["Johan"] = 1982
-
-	fmt.Println(m)
-
-	fmt.Println("Full map!")
-
-	for k, v := range m {
-		fmt.Printf("%s -> %d \n", k, v)
-
+	type user struct {
+		ID        int
+		firstName string
+		lastName  string
 	}
 
-	delete(m, "Johan")
+	//Declare a used and initilize with its zero values
+	var u user
+	fmt.Println(u)
 
-	fmt.Println("Reduced map!")
+	//ser values
 
-	for k, v := range m {
-		fmt.Printf("%s -> %d \n", k, v)
+	u.ID = 10
+	u.firstName = "Jonas"
+	u.lastName = "Vadebo"
 
-	}
+	fmt.Println(u)
 
 }
