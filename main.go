@@ -9,14 +9,25 @@ func main() {
 	//3) infinite loops
 	//4) loop over collections.
 
-	/** infinite loops, ugly way **/
-	var i int
-	//for ; ;{ ugly way
-	for {
-		if i == 5 {
-			break
-		}
-		println(i)
-		i++
+	/** loop over collections **/
+	slice := []int{1, 2, 3, 4, 5}
+
+	for i := 0; i < len(slice); i++ {
+		println(slice[i])
 	}
+
+	for i, v := range slice {
+		println(i, v)
+	}
+
+	wellKnownPorts := map[string]int{"http": 80, "https": 443}
+
+	for _, v := range wellKnownPorts {
+		println(v)
+	}
+
+	for k, v := range wellKnownPorts {
+		println(k, v)
+	}
+
 }
